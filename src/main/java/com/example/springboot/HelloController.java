@@ -12,25 +12,25 @@ public class HelloController {
 	}
 
 	@GetMapping("/api/v1/team")
-	public String index() {
+	public String team() {
 		return "Greetings from Team!";
 	}
 	@GetMapping("/api/v1/buy")
-	public String index() {
+	public String buy() {
 		return "Greetings from Buy!";
 	}
 	@GetMapping("/api/v1/sell")
-	public String index() {
+	public String sell() {
 		return "Greetings from sell!";
 	}
 
 	@GetMapping("/api/v1/sell/source")
-	public String index() {
+	public String source() {
 		return "Greetings from source sell!";
 	}
 
 	@GetMapping("/api/v1/sell/2")
-	public String index() {
+	public String sell2() {
 		return "Greetings from sell2!";
 	}
 
