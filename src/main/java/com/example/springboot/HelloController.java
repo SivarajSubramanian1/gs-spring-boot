@@ -2,7 +2,7 @@ package com.example.springboot;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import java.lang.*;
 @RestController
 public class HelloController {
 
@@ -34,9 +34,14 @@ public class HelloController {
 		return "Greetings from sell2!";
 	}
 
+	@GetMapping("/api/v1/error")
+	public String error() throws Exception {
+		throw new Exception("error processing");
+	}
+
 	@GetMapping("/api/v0")
-	public UserResponse restResponse() {
-		UserResponse userResponse = new UserResponse();
+	public main.java.com.example.springboot.UserResponse restResponse() {
+		main.java.com.example.springboot.UserResponse userResponse = new main.java.com.example.springboot.UserResponse();
 
 		userResponse.setStatus(true);
 		userResponse.setMessage("Data is found");
