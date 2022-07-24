@@ -21,11 +21,13 @@ public class HelloController {
 	}
 	@GetMapping("/api/v1/sell")
 	public String sell() {
+		checkOutvalue(230);
 		return "Greetings from sell!";
 	}
 
 	@GetMapping("/api/v1/sell/source")
 	public String source() {
+		checkOutvalue(200);
 		return "Greetings from source sell!";
 	}
 
@@ -37,6 +39,10 @@ public class HelloController {
 	@GetMapping("/api/v1/error")
 	public String error() throws Exception {
 		throw new Exception("error processing");
+	}
+
+	private void checkOutvalue(int total){
+		System.out.println("Check out value " + total);
 	}
 
 	@GetMapping("/api/v0")
