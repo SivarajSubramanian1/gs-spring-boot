@@ -1,5 +1,7 @@
 package com.example.springboot;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.lang.*;
@@ -24,6 +26,12 @@ public class HelloController {
 		checkOutvalue(230);
 		return "Greetings from sell!";
 	}
+
+	@GetMapping("/api/v1/error2")
+	public ResponseEntity<String> error401() {
+		return new ResponseEntity(HttpStatus.BAD_REQUEST);
+	}
+
 
 	@GetMapping("/api/v1/sell/source")
 	public String source() {
