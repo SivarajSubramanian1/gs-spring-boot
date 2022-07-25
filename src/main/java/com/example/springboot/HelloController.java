@@ -49,7 +49,7 @@ public class HelloController {
     public String sell2() throws InterruptedException {
 		Random random = new Random((10));
 
-        Thread.sleep(random.nextInt()*1000);
+        Thread.sleep(random.nextInt(5)*1000);
 		return "Greetings from sell2!";
     }
 
