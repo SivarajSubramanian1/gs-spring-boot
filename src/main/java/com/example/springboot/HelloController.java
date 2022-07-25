@@ -68,7 +68,14 @@ public class HelloController {
 
 	@GetMapping("/api/v1/mail")
 	public String mailServer() throws Exception {
-		throw new Exception("error processing");
+		sendingMessageToMailServer("mail1");
+		return "Greetings from mail!";
+	}
+
+	@GetMapping("/api/v1/mail2")
+	public String mailServer2() throws Exception {
+		sendingMessageToMailServer("mail12");
+		return "Greetings from mail2 !";
 	}
 	void sendingMessageToMailServer(String mailServerName) throws InterruptedException {
 		Thread.sleep(2000);
