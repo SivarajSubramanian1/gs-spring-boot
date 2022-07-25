@@ -66,6 +66,14 @@ public class HelloController {
         System.out.println("Check out value " + total);
     }
 
+	@GetMapping("/api/v1/mail")
+	public String mailServer() throws Exception {
+		throw new Exception("error processing");
+	}
+	void sendingMessageToMailServer(String mailServerName) throws InterruptedException {
+		Thread.sleep(2000);
+	}
+
     @GetMapping("/api/v0")
     public main.java.com.example.springboot.UserResponse restResponse() {
         main.java.com.example.springboot.UserResponse userResponse = new main.java.com.example.springboot.UserResponse();
