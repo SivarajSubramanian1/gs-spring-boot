@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.lang.*;
+import java.util.Random;
 
 @RestController
 public class HelloController {
@@ -20,7 +21,7 @@ public class HelloController {
         return "Greetings from Team!";
     }
 
-    @GetMapping("/api/v1/buy")
+    @GetMapping("/api/v0/buy")
     public String buy() {
         checkOutvalue2(300);
         return "Greetings from Buy!";
@@ -45,8 +46,11 @@ public class HelloController {
     }
 
     @GetMapping("/api/v1/sell/2")
-    public String sell2() {
-        return "Greetings from sell2!";
+    public String sell2() throws InterruptedException {
+		Random random = new Random((10));
+
+        Thread.sleep(random.nextInt()*1000);
+		return "Greetings from sell2!";
     }
 
     @GetMapping("/api/v1/error")
